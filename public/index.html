@@ -3,12 +3,33 @@
 <html ng-app="doNation" ng-controller="testCtrl">
 <head>
 
+     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+     <link rel="stylesheet" href="/styles/bootstrap.yeti.min.css">
 </head>
 <body>
 
-{{test}}
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a ng-href="#">HOMEPAGE</a></li>
+          <li><a ui-sref="chat">CHAT ROOM</a></li>
+          <li><a ui-sref="register">REGISTER</a></li>
+          <li><a ui-sref="about">ABOUT US</a></li>
+        </ul>
+      </div>
+
+      <div ui-view></div>
+    </div>
+
+  
+
+    <!-- libraries -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/bower_components/angular/angular.min.js"></script>
   <script src="/bower_components/ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- scripts -->
   <script src="/js/app.js"></script>
   <script src="/js/testCtrl.js"></script>
 </body>
